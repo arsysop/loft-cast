@@ -184,6 +184,29 @@ public class DeclItemProviderAdapterFactory extends DeclAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CxxMethodTemplateDeclItemProvider cxxMethodTemplateDeclItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCxxMethodTemplateDeclAdapter() {
+		if (cxxMethodTemplateDeclItemProvider == null) {
+			cxxMethodTemplateDeclItemProvider = new CxxMethodTemplateDeclItemProvider(this);
+		}
+
+		return cxxMethodTemplateDeclItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ru.arsysop.loft.cast.decl.model.api.FunctionDecl} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -343,6 +366,7 @@ public class DeclItemProviderAdapterFactory extends DeclAdapterFactory implement
 		if (translationUnitDeclItemProvider != null) translationUnitDeclItemProvider.dispose();
 		if (namespaceDeclItemProvider != null) namespaceDeclItemProvider.dispose();
 		if (classTemplateDeclItemProvider != null) classTemplateDeclItemProvider.dispose();
+		if (cxxMethodTemplateDeclItemProvider != null) cxxMethodTemplateDeclItemProvider.dispose();
 		if (functionDeclItemProvider != null) functionDeclItemProvider.dispose();
 	}
 

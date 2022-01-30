@@ -111,6 +111,13 @@ public class DeclSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case DeclPackage.CXX_METHOD_TEMPLATE_DECL: {
+				CxxMethodTemplateDecl cxxMethodTemplateDecl = (CxxMethodTemplateDecl)theEObject;
+				T result = caseCxxMethodTemplateDecl(cxxMethodTemplateDecl);
+				if (result == null) result = caseNamedDecl(cxxMethodTemplateDecl);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case DeclPackage.FUNCTION_DECL: {
 				FunctionDecl functionDecl = (FunctionDecl)theEObject;
 				T result = caseFunctionDecl(functionDecl);
@@ -179,6 +186,21 @@ public class DeclSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClassTemplateDecl(ClassTemplateDecl object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cxx Method Template Decl</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cxx Method Template Decl</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCxxMethodTemplateDecl(CxxMethodTemplateDecl object) {
 		return null;
 	}
 

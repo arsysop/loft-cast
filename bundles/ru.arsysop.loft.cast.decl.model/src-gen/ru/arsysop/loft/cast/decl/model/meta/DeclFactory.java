@@ -22,6 +22,7 @@ package ru.arsysop.loft.cast.decl.model.meta;
 import org.eclipse.emf.ecore.EFactory;
 
 import ru.arsysop.loft.cast.decl.model.api.ClassTemplateDecl;
+import ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl;
 import ru.arsysop.loft.cast.decl.model.api.FunctionDecl;
 import ru.arsysop.loft.cast.decl.model.api.NamespaceDecl;
 import ru.arsysop.loft.cast.decl.model.api.TranslationUnitDecl;
@@ -71,6 +72,15 @@ public interface DeclFactory extends EFactory {
 	ClassTemplateDecl createClassTemplateDecl();
 
 	/**
+	 * Returns a new object of class '<em>Cxx Method Template Decl</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cxx Method Template Decl</em>'.
+	 * @generated
+	 */
+	CxxMethodTemplateDecl createCxxMethodTemplateDecl();
+
+	/**
 	 * Returns a new object of class '<em>Function Decl</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,6 +96,6 @@ public interface DeclFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	DeclPackage getCastPackage();
+	DeclPackage getDeclPackage();
 
 } //CastFactory

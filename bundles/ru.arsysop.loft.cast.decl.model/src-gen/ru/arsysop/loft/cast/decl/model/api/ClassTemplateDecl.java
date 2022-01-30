@@ -39,15 +39,17 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ClassTemplateDecl extends NamedDecl {
 	/**
-	 * Returns the value of the '<em><b>Methods</b></em>' reference list.
-	 * The list contents are of type {@link ru.arsysop.loft.cast.decl.model.api.FunctionDecl}.
+	 * Returns the value of the '<em><b>Methods</b></em>' containment reference list.
+	 * The list contents are of type {@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl}.
+	 * It is bidirectional and its opposite is '{@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl#getClassTemplate <em>Class Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Methods</em>' reference list.
+	 * @return the value of the '<em>Methods</em>' containment reference list.
 	 * @see ru.arsysop.loft.cast.decl.model.meta.DeclPackage#getClassTemplateDecl_Methods()
-	 * @model
+	 * @see ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl#getClassTemplate
+	 * @model opposite="classTemplate" containment="true"
 	 * @generated
 	 */
-	EList<FunctionDecl> getMethods();
+	EList<CxxMethodTemplateDecl> getMethods();
 
 } // ClassTemplateDecl

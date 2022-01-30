@@ -102,6 +102,10 @@ public class DeclAdapterFactory extends AdapterFactoryImpl {
 				return createClassTemplateDeclAdapter();
 			}
 			@Override
+			public Adapter caseCxxMethodTemplateDecl(CxxMethodTemplateDecl object) {
+				return createCxxMethodTemplateDeclAdapter();
+			}
+			@Override
 			public Adapter caseFunctionDecl(FunctionDecl object) {
 				return createFunctionDeclAdapter();
 			}
@@ -178,6 +182,20 @@ public class DeclAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createClassTemplateDeclAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl <em>Cxx Method Template Decl</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl
+	 * @generated
+	 */
+	public Adapter createCxxMethodTemplateDeclAdapter() {
 		return null;
 	}
 

@@ -30,6 +30,9 @@
     <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.decl.ecore/model/decl.ecore#//ClassTemplateDecl">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.decl.ecore/model/decl.ecore#//ClassTemplateDecl/methods"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.decl.ecore/model/decl.ecore#//CxxMethodTemplateDecl">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.decl.ecore/model/decl.ecore#//CxxMethodTemplateDecl/classTemplate"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.decl.ecore/model/decl.ecore#//FunctionDecl"/>
   </genPackages>
 </genmodel:GenModel>
