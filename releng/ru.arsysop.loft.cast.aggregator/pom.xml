@@ -34,6 +34,7 @@
 
 		<module>..\..\features\ru.arsysop.loft.cast.license.feature</module>
 
+		<module>..\..\bundles\ru.arsysop.loft.cast.decl</module>
 		<module>..\..\bundles\ru.arsysop.loft.cast.decl.ecore</module>
 		<module>..\..\bundles\ru.arsysop.loft.cast.decl.model</module>
 		<module>..\..\bundles\ru.arsysop.loft.cast.decl.edit</module>
