@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import ru.arsysop.loft.cast.decl.model.api.ClassTemplateDecl;
+import ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl;
 import ru.arsysop.loft.cast.decl.model.api.FunctionDecl;
 import ru.arsysop.loft.cast.decl.model.api.NamedDecl;
 import ru.arsysop.loft.cast.decl.model.api.NamespaceDecl;
@@ -68,6 +69,13 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 	 * @generated
 	 */
 	private EClass classTemplateDeclEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cxxMethodTemplateDeclEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,23 +126,23 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 		if (isInited) return (DeclPackage)EPackage.Registry.INSTANCE.getEPackage(DeclPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredCastPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		DeclPackageImpl theCastPackage = registeredCastPackage instanceof DeclPackageImpl ? (DeclPackageImpl)registeredCastPackage : new DeclPackageImpl();
+		Object registeredDeclPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		DeclPackageImpl theDeclPackage = registeredDeclPackage instanceof DeclPackageImpl ? (DeclPackageImpl)registeredDeclPackage : new DeclPackageImpl();
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theCastPackage.createPackageContents();
+		theDeclPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theCastPackage.initializePackageContents();
+		theDeclPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theCastPackage.freeze();
+		theDeclPackage.freeze();
 
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(DeclPackage.eNS_URI, theCastPackage);
-		return theCastPackage;
+		EPackage.Registry.INSTANCE.put(DeclPackage.eNS_URI, theDeclPackage);
+		return theDeclPackage;
 	}
 
 	/**
@@ -233,6 +241,26 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getCxxMethodTemplateDecl() {
+		return cxxMethodTemplateDeclEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCxxMethodTemplateDecl_ClassTemplate() {
+		return (EReference)cxxMethodTemplateDeclEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFunctionDecl() {
 		return functionDeclEClass;
 	}
@@ -243,7 +271,7 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 	 * @generated
 	 */
 	@Override
-	public DeclFactory getCastFactory() {
+	public DeclFactory getDeclFactory() {
 		return (DeclFactory)getEFactoryInstance();
 	}
 
@@ -279,6 +307,9 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 		classTemplateDeclEClass = createEClass(CLASS_TEMPLATE_DECL);
 		createEReference(classTemplateDeclEClass, CLASS_TEMPLATE_DECL__METHODS);
 
+		cxxMethodTemplateDeclEClass = createEClass(CXX_METHOD_TEMPLATE_DECL);
+		createEReference(cxxMethodTemplateDeclEClass, CXX_METHOD_TEMPLATE_DECL__CLASS_TEMPLATE);
+
 		functionDeclEClass = createEClass(FUNCTION_DECL);
 	}
 
@@ -313,6 +344,7 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 		translationUnitDeclEClass.getESuperTypes().add(this.getNamedDecl());
 		namespaceDeclEClass.getESuperTypes().add(this.getNamedDecl());
 		classTemplateDeclEClass.getESuperTypes().add(this.getNamedDecl());
+		cxxMethodTemplateDeclEClass.getESuperTypes().add(this.getNamedDecl());
 		functionDeclEClass.getESuperTypes().add(this.getNamedDecl());
 
 		// Initialize classes, features, and operations; add parameters
@@ -327,7 +359,10 @@ public class DeclPackageImpl extends EPackageImpl implements DeclPackage {
 		initEReference(getNamespaceDecl_Declarations(), this.getNamedDecl(), null, "declarations", null, 0, -1, NamespaceDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(classTemplateDeclEClass, ClassTemplateDecl.class, "ClassTemplateDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-		initEReference(getClassTemplateDecl_Methods(), this.getFunctionDecl(), null, "methods", null, 0, -1, ClassTemplateDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+		initEReference(getClassTemplateDecl_Methods(), this.getCxxMethodTemplateDecl(), this.getCxxMethodTemplateDecl_ClassTemplate(), "methods", null, 0, -1, ClassTemplateDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+
+		initEClass(cxxMethodTemplateDeclEClass, CxxMethodTemplateDecl.class, "CxxMethodTemplateDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEReference(getCxxMethodTemplateDecl_ClassTemplate(), this.getClassTemplateDecl(), this.getClassTemplateDecl_Methods(), "classTemplate", null, 1, 1, CxxMethodTemplateDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(functionDeclEClass, FunctionDecl.class, "FunctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 

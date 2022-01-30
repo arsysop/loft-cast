@@ -13,5 +13,6 @@ Export-Package: ru.arsysop.loft.cast.decl.edit,
  ru.arsysop.loft.cast.decl.edit.providers
 Require-Bundle: org.eclipse.core.runtime;bundle-version="0.0.0",
  org.eclipse.emf.ecore.edit;bundle-version="0.0.0",
- ru.arsysop.loft.cast.decl.model;bundle-version="0.1.0"
+ ru.arsysop.loft.cast.decl.model;bundle-version="0.1.0";visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

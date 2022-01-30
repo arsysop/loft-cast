@@ -21,14 +21,16 @@ package ru.arsysop.loft.cast.decl.model.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import ru.arsysop.loft.cast.decl.model.api.ClassTemplateDecl;
-import ru.arsysop.loft.cast.decl.model.api.FunctionDecl;
+import ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl;
 import ru.arsysop.loft.cast.decl.model.meta.DeclPackage;
 
 /**
@@ -46,14 +48,14 @@ import ru.arsysop.loft.cast.decl.model.meta.DeclPackage;
  */
 public class ClassTemplateDeclImpl extends NamedDeclImpl implements ClassTemplateDecl {
 	/**
-	 * The cached value of the '{@link #getMethods() <em>Methods</em>}' reference list.
+	 * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMethods()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FunctionDecl> methods;
+	protected EList<CxxMethodTemplateDecl> methods;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,11 +82,42 @@ public class ClassTemplateDeclImpl extends NamedDeclImpl implements ClassTemplat
 	 * @generated
 	 */
 	@Override
-	public EList<FunctionDecl> getMethods() {
+	public EList<CxxMethodTemplateDecl> getMethods() {
 		if (methods == null) {
-			methods = new EObjectResolvingEList<FunctionDecl>(FunctionDecl.class, this, DeclPackage.CLASS_TEMPLATE_DECL__METHODS);
+			methods = new EObjectContainmentWithInverseEList<CxxMethodTemplateDecl>(CxxMethodTemplateDecl.class, this, DeclPackage.CLASS_TEMPLATE_DECL__METHODS, DeclPackage.CXX_METHOD_TEMPLATE_DECL__CLASS_TEMPLATE);
 		}
 		return methods;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DeclPackage.CLASS_TEMPLATE_DECL__METHODS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMethods()).basicAdd(otherEnd, msgs);
+			default:
+				return super.eInverseAdd(otherEnd, featureID, msgs);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DeclPackage.CLASS_TEMPLATE_DECL__METHODS:
+				return ((InternalEList<?>)getMethods()).basicRemove(otherEnd, msgs);
+			default:
+				return super.eInverseRemove(otherEnd, featureID, msgs);
+		}
 	}
 
 	/**
@@ -113,7 +146,7 @@ public class ClassTemplateDeclImpl extends NamedDeclImpl implements ClassTemplat
 		switch (featureID) {
 			case DeclPackage.CLASS_TEMPLATE_DECL__METHODS:
 				getMethods().clear();
-				getMethods().addAll((Collection<? extends FunctionDecl>)newValue);
+				getMethods().addAll((Collection<? extends CxxMethodTemplateDecl>)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);

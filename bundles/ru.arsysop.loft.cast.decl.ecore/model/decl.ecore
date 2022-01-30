@@ -16,7 +16,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassTemplateDecl" eSuperTypes="#//NamedDecl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
-        eType="#//FunctionDecl"/>
+        eType="#//CxxMethodTemplateDecl" containment="true" eOpposite="#//CxxMethodTemplateDecl/classTemplate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CxxMethodTemplateDecl" eSuperTypes="#//NamedDecl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classTemplate" lowerBound="1"
+        eType="#//ClassTemplateDecl" eOpposite="#//ClassTemplateDecl/methods"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionDecl" eSuperTypes="#//NamedDecl"/>
 </ecore:EPackage>

@@ -46,9 +46,9 @@ public class DeclFactoryImpl extends EFactoryImpl implements DeclFactory {
 	 */
 	public static DeclFactory init() {
 		try {
-			DeclFactory theCastFactory = (DeclFactory)EPackage.Registry.INSTANCE.getEFactory(DeclPackage.eNS_URI);
-			if (theCastFactory != null) {
-				return theCastFactory;
+			DeclFactory theDeclFactory = (DeclFactory)EPackage.Registry.INSTANCE.getEFactory(DeclPackage.eNS_URI);
+			if (theDeclFactory != null) {
+				return theDeclFactory;
 			}
 		}
 		catch (Exception exception) {
@@ -78,6 +78,7 @@ public class DeclFactoryImpl extends EFactoryImpl implements DeclFactory {
 			case DeclPackage.TRANSLATION_UNIT_DECL: return createTranslationUnitDecl();
 			case DeclPackage.NAMESPACE_DECL: return createNamespaceDecl();
 			case DeclPackage.CLASS_TEMPLATE_DECL: return createClassTemplateDecl();
+			case DeclPackage.CXX_METHOD_TEMPLATE_DECL: return createCxxMethodTemplateDecl();
 			case DeclPackage.FUNCTION_DECL: return createFunctionDecl();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -123,6 +124,17 @@ public class DeclFactoryImpl extends EFactoryImpl implements DeclFactory {
 	 * @generated
 	 */
 	@Override
+	public CxxMethodTemplateDecl createCxxMethodTemplateDecl() {
+		CxxMethodTemplateDeclImpl cxxMethodTemplateDecl = new CxxMethodTemplateDeclImpl();
+		return cxxMethodTemplateDecl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public FunctionDecl createFunctionDecl() {
 		FunctionDeclImpl functionDecl = new FunctionDeclImpl();
 		return functionDecl;
@@ -134,7 +146,7 @@ public class DeclFactoryImpl extends EFactoryImpl implements DeclFactory {
 	 * @generated
 	 */
 	@Override
-	public DeclPackage getCastPackage() {
+	public DeclPackage getDeclPackage() {
 		return (DeclPackage)getEPackage();
 	}
 

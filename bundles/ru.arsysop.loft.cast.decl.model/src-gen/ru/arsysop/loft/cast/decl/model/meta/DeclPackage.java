@@ -47,7 +47,7 @@ public interface DeclPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "cast"; //$NON-NLS-1$
+	String eNAME = "decl"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace URI.
@@ -55,7 +55,7 @@ public interface DeclPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.arsysop.ru/cast/0.1.0"; //$NON-NLS-1$
+	String eNS_URI = "http://www.arsysop.ru/cast/decl/0.1.0"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace name.
@@ -63,7 +63,7 @@ public interface DeclPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "cast"; //$NON-NLS-1$
+	String eNS_PREFIX = "decl"; //$NON-NLS-1$
 
 	/**
 	 * The singleton instance of the package.
@@ -258,7 +258,7 @@ public interface DeclPackage extends EPackage {
 	int CLASS_TEMPLATE_DECL__NAME = NAMED_DECL__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Methods</b></em>' reference list.
+	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -285,6 +285,61 @@ public interface DeclPackage extends EPackage {
 	int CLASS_TEMPLATE_DECL_OPERATION_COUNT = NAMED_DECL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ru.arsysop.loft.cast.decl.model.impl.CxxMethodTemplateDeclImpl <em>Cxx Method Template Decl</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ru.arsysop.loft.cast.decl.model.impl.CxxMethodTemplateDeclImpl
+	 * @see ru.arsysop.loft.cast.decl.model.impl.DeclPackageImpl#getCxxMethodTemplateDecl()
+	 * @generated
+	 */
+	int CXX_METHOD_TEMPLATE_DECL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CXX_METHOD_TEMPLATE_DECL__ID = NAMED_DECL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CXX_METHOD_TEMPLATE_DECL__NAME = NAMED_DECL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Class Template</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CXX_METHOD_TEMPLATE_DECL__CLASS_TEMPLATE = NAMED_DECL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Cxx Method Template Decl</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CXX_METHOD_TEMPLATE_DECL_FEATURE_COUNT = NAMED_DECL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Cxx Method Template Decl</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CXX_METHOD_TEMPLATE_DECL_OPERATION_COUNT = NAMED_DECL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ru.arsysop.loft.cast.decl.model.impl.FunctionDeclImpl <em>Function Decl</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -292,7 +347,7 @@ public interface DeclPackage extends EPackage {
 	 * @see ru.arsysop.loft.cast.decl.model.impl.DeclPackageImpl#getFunctionDecl()
 	 * @generated
 	 */
-	int FUNCTION_DECL = 4;
+	int FUNCTION_DECL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -416,15 +471,36 @@ public interface DeclPackage extends EPackage {
 	EClass getClassTemplateDecl();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ru.arsysop.loft.cast.decl.model.api.ClassTemplateDecl#getMethods <em>Methods</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ru.arsysop.loft.cast.decl.model.api.ClassTemplateDecl#getMethods <em>Methods</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Methods</em>'.
+	 * @return the meta object for the containment reference list '<em>Methods</em>'.
 	 * @see ru.arsysop.loft.cast.decl.model.api.ClassTemplateDecl#getMethods()
 	 * @see #getClassTemplateDecl()
 	 * @generated
 	 */
 	EReference getClassTemplateDecl_Methods();
+
+	/**
+	 * Returns the meta object for class '{@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl <em>Cxx Method Template Decl</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cxx Method Template Decl</em>'.
+	 * @see ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl
+	 * @generated
+	 */
+	EClass getCxxMethodTemplateDecl();
+
+	/**
+	 * Returns the meta object for the container reference '{@link ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl#getClassTemplate <em>Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Class Template</em>'.
+	 * @see ru.arsysop.loft.cast.decl.model.api.CxxMethodTemplateDecl#getClassTemplate()
+	 * @see #getCxxMethodTemplateDecl()
+	 * @generated
+	 */
+	EReference getCxxMethodTemplateDecl_ClassTemplate();
 
 	/**
 	 * Returns the meta object for class '{@link ru.arsysop.loft.cast.decl.model.api.FunctionDecl <em>Function Decl</em>}'.
@@ -443,6 +519,6 @@ public interface DeclPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	DeclFactory getCastFactory();
+	DeclFactory getDeclFactory();
 
 } //CastPackage
