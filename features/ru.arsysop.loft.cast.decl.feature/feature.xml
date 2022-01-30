@@ -20,11 +20,11 @@
 		ArSysOp - initial API and implementation
 -->
 <feature
-      id="ru.arsysop.loft.cast.feature"
+      id="ru.arsysop.loft.cast.decl.feature"
       label="%featureName"
       version="0.1.0.qualifier"
       provider-name="%providerName"
-      plugin="ru.arsysop.loft.cast"
+      plugin="ru.arsysop.loft.cast.decl"
       license-feature="ru.arsysop.loft.cast.license.feature"
       license-feature-version="0.1.0">
 
@@ -40,12 +40,29 @@
       %license
    </license>
 
-   <includes
-         id="ru.arsysop.loft.cast.decl.feature"
-         version="0.0.0"/>
+   <plugin
+         id="ru.arsysop.loft.cast.decl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
-         id="ru.arsysop.loft.cast"
+         id="ru.arsysop.loft.cast.decl.ecore"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ru.arsysop.loft.cast.decl.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ru.arsysop.loft.cast.decl.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"

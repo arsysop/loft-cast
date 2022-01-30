@@ -34,10 +34,12 @@
 
 		<module>..\..\features\ru.arsysop.loft.cast.license.feature</module>
 
+		<module>..\..\bundles\ru.arsysop.loft.cast.decl.ecore</module>
+		<module>..\..\bundles\ru.arsysop.loft.cast.decl.model</module>
+		<module>..\..\bundles\ru.arsysop.loft.cast.decl.edit</module>
+		<module>..\..\features\ru.arsysop.loft.cast.decl.feature</module>
+
 		<module>..\..\bundles\ru.arsysop.loft.cast</module>
-		<module>..\..\bundles\ru.arsysop.loft.cast.ecore</module>
-		<module>..\..\bundles\ru.arsysop.loft.cast.model</module>
-		<module>..\..\bundles\ru.arsysop.loft.cast.edit</module>
 		<module>..\..\features\ru.arsysop.loft.cast.feature</module>
 
 		<module>..\..\releng\ru.arsysop.loft.cast.repository</module>
