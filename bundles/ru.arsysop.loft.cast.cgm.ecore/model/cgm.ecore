@@ -6,6 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" lowerBound="1"
         eType="#//Options"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="index" lowerBound="1" eType="#//Index"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" eType="#//CallTree"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tool">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -13,4 +14,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Options"/>
   <eClassifiers xsi:type="ecore:EClass" name="Index"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CallTree"/>
 </ecore:EPackage>
