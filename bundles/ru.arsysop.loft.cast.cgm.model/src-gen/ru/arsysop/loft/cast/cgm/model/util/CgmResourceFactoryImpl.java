@@ -20,19 +20,17 @@
 package ru.arsysop.loft.cast.cgm.model.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
-import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
+import org.emfjson.jackson.resource.JsonResourceFactory;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Resource Factory</b> associated with the package.
  * <!-- end-user-doc -->
  * @see ru.arsysop.loft.cast.cgm.model.util.CgmResourceImpl
- * @generated
+ * @generated NOT
  */
-public class CgmResourceFactoryImpl extends ResourceFactoryImpl {
+public class CgmResourceFactoryImpl extends JsonResourceFactory {
 	/**
 	 * Creates an instance of the resource factory.
 	 * <!-- begin-user-doc -->
