@@ -53,7 +53,7 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-<!--
+
    <plugin
          id="ru.arsysop.loft.cast.cgm.model"
          download-size="0"
@@ -61,6 +61,7 @@
          version="0.0.0"
          unpack="false"/>
 
+<!--
    <plugin
          id="ru.arsysop.loft.cast.cgm.edit"
          download-size="0"
