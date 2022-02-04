@@ -40,13 +40,13 @@ import org.eclipse.emf.ecore.EObject;
 public interface Tool extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"clang"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see ru.arsysop.loft.cast.cgm.model.meta.CgmPackage#getTool_Type()
-	 * @model default="clang" required="true"
+	 * @model default="" required="true"
 	 * @generated
 	 */
 	String getType();

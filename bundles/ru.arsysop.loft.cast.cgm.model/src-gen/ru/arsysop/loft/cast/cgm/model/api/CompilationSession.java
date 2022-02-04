@@ -42,88 +42,88 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CompilationSession extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Tool</b></em>' reference.
+	 * Returns the value of the '<em><b>Tool</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tool</em>' reference.
+	 * @return the value of the '<em>Tool</em>' containment reference.
 	 * @see #setTool(Tool)
 	 * @see ru.arsysop.loft.cast.cgm.model.meta.CgmPackage#getCompilationSession_Tool()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Tool getTool();
 
 	/**
-	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getTool <em>Tool</em>}' reference.
+	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getTool <em>Tool</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tool</em>' reference.
+	 * @param value the new value of the '<em>Tool</em>' containment reference.
 	 * @see #getTool()
 	 * @generated
 	 */
 	void setTool(Tool value);
 
 	/**
-	 * Returns the value of the '<em><b>Options</b></em>' reference.
+	 * Returns the value of the '<em><b>Options</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Options</em>' reference.
+	 * @return the value of the '<em>Options</em>' containment reference.
 	 * @see #setOptions(Options)
 	 * @see ru.arsysop.loft.cast.cgm.model.meta.CgmPackage#getCompilationSession_Options()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Options getOptions();
 
 	/**
-	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getOptions <em>Options</em>}' reference.
+	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getOptions <em>Options</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Options</em>' reference.
+	 * @param value the new value of the '<em>Options</em>' containment reference.
 	 * @see #getOptions()
 	 * @generated
 	 */
 	void setOptions(Options value);
 
 	/**
-	 * Returns the value of the '<em><b>Index</b></em>' reference.
+	 * Returns the value of the '<em><b>Index</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Index</em>' reference.
+	 * @return the value of the '<em>Index</em>' containment reference.
 	 * @see #setIndex(Index)
 	 * @see ru.arsysop.loft.cast.cgm.model.meta.CgmPackage#getCompilationSession_Index()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Index getIndex();
 
 	/**
-	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getIndex <em>Index</em>}' reference.
+	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getIndex <em>Index</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' reference.
+	 * @param value the new value of the '<em>Index</em>' containment reference.
 	 * @see #getIndex()
 	 * @generated
 	 */
 	void setIndex(Index value);
 
 	/**
-	 * Returns the value of the '<em><b>Calls</b></em>' reference.
+	 * Returns the value of the '<em><b>Calls</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calls</em>' reference.
+	 * @return the value of the '<em>Calls</em>' containment reference.
 	 * @see #setCalls(CallTree)
 	 * @see ru.arsysop.loft.cast.cgm.model.meta.CgmPackage#getCompilationSession_Calls()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	CallTree getCalls();
 
 	/**
-	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getCalls <em>Calls</em>}' reference.
+	 * Sets the value of the '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getCalls <em>Calls</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calls</em>' reference.
+	 * @param value the new value of the '<em>Calls</em>' containment reference.
 	 * @see #getCalls()
 	 * @generated
 	 */

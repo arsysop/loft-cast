@@ -52,7 +52,7 @@ public class ToolImpl extends MinimalEObjectImpl.Container implements Tool {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = "clang"; //$NON-NLS-1$
+	protected static final String TYPE_EDEFAULT = ""; //$NON-NLS-1$
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.

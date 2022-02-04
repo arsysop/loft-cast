@@ -9,25 +9,28 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     editPluginID="ru.arsysop.loft.cast.cgm.edit" editorPluginID="ru.arsysop.loft.cast.cgm.editor"
     optimizedHasChildren="true" tableProviders="true" colorProviders="true" fontProviders="true"
-    operationReflection="true" runtimePlatform="RCP" importOrganizing="true" styleProviders="true"
-    findAction="true">
+    operationReflection="true" importOrganizing="true" styleProviders="true" findAction="true">
   <foreignModel>../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore</foreignModel>
   <genPackages prefix="Cgm" basePackage="ru.arsysop.loft.cast" resource="Basic" disposableProviderFactory="true"
       interfacePackageSuffix="model.api" metaDataPackageSuffix="model.meta" classPackageSuffix="model.impl"
       utilityPackageSuffix="model.util" providerPackageSuffix="edit.providers" presentationPackageSuffix="editor"
       testsPackageSuffix="model.tests" literalsInterface="false" extensibleProviderFactory="true"
       ecorePackage="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#/">
-    <genClasses ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/tool"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/options"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/index"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/calls"/>
+    <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession">
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/tool"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/options"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/index"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CompilationSession/calls"/>
     </genClasses>
-    <genClasses ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Tool">
+    <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Tool">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Tool/type"/>
     </genClasses>
-    <genClasses ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Options"/>
-    <genClasses ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Index"/>
-    <genClasses ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CallTree"/>
+    <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Options"/>
+    <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//Index"/>
+    <genClasses image="false" ecoreClass="../../ru.arsysop.loft.cast.cgm.ecore/model/cgm.ecore#//CallTree"/>
   </genPackages>
 </genmodel:GenModel>

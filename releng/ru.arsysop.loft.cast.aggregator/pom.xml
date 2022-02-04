@@ -43,9 +43,7 @@
 		<module>..\..\bundles\ru.arsysop.loft.cast.cgm</module>
 		<module>..\..\bundles\ru.arsysop.loft.cast.cgm.ecore</module>
 		<module>..\..\bundles\ru.arsysop.loft.cast.cgm.model</module>
-<!--
 		<module>..\..\bundles\ru.arsysop.loft.cast.cgm.edit</module>
--->
 		<module>..\..\features\ru.arsysop.loft.cast.cgm.feature</module>
 
 		<module>..\..\bundles\ru.arsysop.loft.cast</module>

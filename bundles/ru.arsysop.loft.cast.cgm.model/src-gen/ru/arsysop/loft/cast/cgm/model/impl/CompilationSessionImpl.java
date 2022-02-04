@@ -21,6 +21,7 @@ package ru.arsysop.loft.cast.cgm.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -53,7 +54,7 @@ import ru.arsysop.loft.cast.cgm.model.meta.CgmPackage;
  */
 public class CompilationSessionImpl extends MinimalEObjectImpl.Container implements CompilationSession {
 	/**
-	 * The cached value of the '{@link #getTool() <em>Tool</em>}' reference.
+	 * The cached value of the '{@link #getTool() <em>Tool</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTool()
@@ -63,7 +64,7 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	protected Tool tool;
 
 	/**
-	 * The cached value of the '{@link #getOptions() <em>Options</em>}' reference.
+	 * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOptions()
@@ -73,7 +74,7 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	protected Options options;
 
 	/**
-	 * The cached value of the '{@link #getIndex() <em>Index</em>}' reference.
+	 * The cached value of the '{@link #getIndex() <em>Index</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIndex()
@@ -83,7 +84,7 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	protected Index index;
 
 	/**
-	 * The cached value of the '{@link #getCalls() <em>Calls</em>}' reference.
+	 * The cached value of the '{@link #getCalls() <em>Calls</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCalls()
@@ -118,14 +119,6 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public Tool getTool() {
-		if (tool != null && tool.eIsProxy()) {
-			InternalEObject oldTool = (InternalEObject)tool;
-			tool = (Tool)eResolveProxy(oldTool);
-			if (tool != oldTool) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CgmPackage.COMPILATION_SESSION__TOOL, oldTool, tool));
-			}
-		}
 		return tool;
 	}
 
@@ -134,8 +127,14 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tool basicGetTool() {
-		return tool;
+	public NotificationChain basicSetTool(Tool newTool, NotificationChain msgs) {
+		Tool oldTool = tool;
+		tool = newTool;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__TOOL, oldTool, newTool);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -145,10 +144,17 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public void setTool(Tool newTool) {
-		Tool oldTool = tool;
-		tool = newTool;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__TOOL, oldTool, tool));
+		if (newTool != tool) {
+			NotificationChain msgs = null;
+			if (tool != null)
+				msgs = ((InternalEObject)tool).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__TOOL, null, msgs);
+			if (newTool != null)
+				msgs = ((InternalEObject)newTool).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__TOOL, null, msgs);
+			msgs = basicSetTool(newTool, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__TOOL, newTool, newTool));
 	}
 
 	/**
@@ -158,14 +164,6 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public Options getOptions() {
-		if (options != null && options.eIsProxy()) {
-			InternalEObject oldOptions = (InternalEObject)options;
-			options = (Options)eResolveProxy(oldOptions);
-			if (options != oldOptions) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CgmPackage.COMPILATION_SESSION__OPTIONS, oldOptions, options));
-			}
-		}
 		return options;
 	}
 
@@ -174,8 +172,14 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Options basicGetOptions() {
-		return options;
+	public NotificationChain basicSetOptions(Options newOptions, NotificationChain msgs) {
+		Options oldOptions = options;
+		options = newOptions;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__OPTIONS, oldOptions, newOptions);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -185,10 +189,17 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public void setOptions(Options newOptions) {
-		Options oldOptions = options;
-		options = newOptions;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__OPTIONS, oldOptions, options));
+		if (newOptions != options) {
+			NotificationChain msgs = null;
+			if (options != null)
+				msgs = ((InternalEObject)options).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__OPTIONS, null, msgs);
+			if (newOptions != null)
+				msgs = ((InternalEObject)newOptions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__OPTIONS, null, msgs);
+			msgs = basicSetOptions(newOptions, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__OPTIONS, newOptions, newOptions));
 	}
 
 	/**
@@ -198,14 +209,6 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public Index getIndex() {
-		if (index != null && index.eIsProxy()) {
-			InternalEObject oldIndex = (InternalEObject)index;
-			index = (Index)eResolveProxy(oldIndex);
-			if (index != oldIndex) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CgmPackage.COMPILATION_SESSION__INDEX, oldIndex, index));
-			}
-		}
 		return index;
 	}
 
@@ -214,8 +217,14 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Index basicGetIndex() {
-		return index;
+	public NotificationChain basicSetIndex(Index newIndex, NotificationChain msgs) {
+		Index oldIndex = index;
+		index = newIndex;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__INDEX, oldIndex, newIndex);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -225,10 +234,17 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public void setIndex(Index newIndex) {
-		Index oldIndex = index;
-		index = newIndex;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__INDEX, oldIndex, index));
+		if (newIndex != index) {
+			NotificationChain msgs = null;
+			if (index != null)
+				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__INDEX, null, msgs);
+			if (newIndex != null)
+				msgs = ((InternalEObject)newIndex).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__INDEX, null, msgs);
+			msgs = basicSetIndex(newIndex, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__INDEX, newIndex, newIndex));
 	}
 
 	/**
@@ -238,14 +254,6 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public CallTree getCalls() {
-		if (calls != null && calls.eIsProxy()) {
-			InternalEObject oldCalls = (InternalEObject)calls;
-			calls = (CallTree)eResolveProxy(oldCalls);
-			if (calls != oldCalls) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CgmPackage.COMPILATION_SESSION__CALLS, oldCalls, calls));
-			}
-		}
 		return calls;
 	}
 
@@ -254,8 +262,14 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CallTree basicGetCalls() {
-		return calls;
+	public NotificationChain basicSetCalls(CallTree newCalls, NotificationChain msgs) {
+		CallTree oldCalls = calls;
+		calls = newCalls;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__CALLS, oldCalls, newCalls);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -265,10 +279,38 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	public void setCalls(CallTree newCalls) {
-		CallTree oldCalls = calls;
-		calls = newCalls;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__CALLS, oldCalls, calls));
+		if (newCalls != calls) {
+			NotificationChain msgs = null;
+			if (calls != null)
+				msgs = ((InternalEObject)calls).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__CALLS, null, msgs);
+			if (newCalls != null)
+				msgs = ((InternalEObject)newCalls).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CgmPackage.COMPILATION_SESSION__CALLS, null, msgs);
+			msgs = basicSetCalls(newCalls, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CgmPackage.COMPILATION_SESSION__CALLS, newCalls, newCalls));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CgmPackage.COMPILATION_SESSION__TOOL:
+				return basicSetTool(null, msgs);
+			case CgmPackage.COMPILATION_SESSION__OPTIONS:
+				return basicSetOptions(null, msgs);
+			case CgmPackage.COMPILATION_SESSION__INDEX:
+				return basicSetIndex(null, msgs);
+			case CgmPackage.COMPILATION_SESSION__CALLS:
+				return basicSetCalls(null, msgs);
+			default:
+				return super.eInverseRemove(otherEnd, featureID, msgs);
+		}
 	}
 
 	/**
@@ -280,17 +322,13 @@ public class CompilationSessionImpl extends MinimalEObjectImpl.Container impleme
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CgmPackage.COMPILATION_SESSION__TOOL:
-				if (resolve) return getTool();
-				return basicGetTool();
+				return getTool();
 			case CgmPackage.COMPILATION_SESSION__OPTIONS:
-				if (resolve) return getOptions();
-				return basicGetOptions();
+				return getOptions();
 			case CgmPackage.COMPILATION_SESSION__INDEX:
-				if (resolve) return getIndex();
-				return basicGetIndex();
+				return getIndex();
 			case CgmPackage.COMPILATION_SESSION__CALLS:
-				if (resolve) return getCalls();
-				return basicGetCalls();
+				return getCalls();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
