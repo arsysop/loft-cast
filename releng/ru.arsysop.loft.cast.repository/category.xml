@@ -35,6 +35,10 @@
 		id="ru.arsysop.loft.cast.license.feature">
 		<category name="ru.arsysop.loft.cast.category" />
 	</feature>
+	<feature
+		id="ru.arsysop.loft.cast.cgm.editor.feature">
+		<category name="ru.arsysop.loft.cast.category" />
+	</feature>
 <!--
 	<category-def
 		name="ru.arsysop.loft.cast.category.source"
@@ -45,6 +49,10 @@
 	</category-def>
 	<feature
 		id="ru.arsysop.loft.cast.feature.source">
+		<category name="ru.arsysop.loft.cast.category.source" />
+	</feature>
+	<feature
+		id="ru.arsysop.loft.cast.cgm.editor.feature.source">
 		<category name="ru.arsysop.loft.cast.category.source" />
 	</feature>
 -->

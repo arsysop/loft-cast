@@ -46,6 +46,9 @@
 		<module>..\..\bundles\ru.arsysop.loft.cast.cgm.edit</module>
 		<module>..\..\features\ru.arsysop.loft.cast.cgm.feature</module>
 
+		<module>..\..\bundles\ru.arsysop.loft.cast.cgm.editor</module>
+		<module>..\..\features\ru.arsysop.loft.cast.cgm.editor.feature</module>
+
 		<module>..\..\bundles\ru.arsysop.loft.cast</module>
 		<module>..\..\features\ru.arsysop.loft.cast.feature</module>
 
