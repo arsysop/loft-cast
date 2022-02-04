@@ -2,15 +2,18 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cgm" nsURI="http://www.arsysop.ru/cast/cgm/0.1.0" nsPrefix="cgm">
   <eClassifiers xsi:type="ecore:EClass" name="CompilationSession">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tool" lowerBound="1" eType="#//Tool"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tool" lowerBound="1" eType="#//Tool"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" lowerBound="1"
-        eType="#//Options"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="index" lowerBound="1" eType="#//Index"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" eType="#//CallTree"/>
+        eType="#//Options" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="index" lowerBound="1" eType="#//Index"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" eType="#//CallTree"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tool">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="clang"/>
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Options"/>
   <eClassifiers xsi:type="ecore:EClass" name="Index"/>

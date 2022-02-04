@@ -84,7 +84,7 @@ public interface CgmPackage extends EPackage {
 	int COMPILATION_SESSION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tool</b></em>' reference.
+	 * The feature id for the '<em><b>Tool</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public interface CgmPackage extends EPackage {
 	int COMPILATION_SESSION__TOOL = 0;
 
 	/**
-	 * The feature id for the '<em><b>Options</b></em>' reference.
+	 * The feature id for the '<em><b>Options</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public interface CgmPackage extends EPackage {
 	int COMPILATION_SESSION__OPTIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Index</b></em>' reference.
+	 * The feature id for the '<em><b>Index</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -111,7 +111,7 @@ public interface CgmPackage extends EPackage {
 	int COMPILATION_SESSION__INDEX = 2;
 
 	/**
-	 * The feature id for the '<em><b>Calls</b></em>' reference.
+	 * The feature id for the '<em><b>Calls</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -270,10 +270,10 @@ public interface CgmPackage extends EPackage {
 	EClass getCompilationSession();
 
 	/**
-	 * Returns the meta object for the reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getTool <em>Tool</em>}'.
+	 * Returns the meta object for the containment reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getTool <em>Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tool</em>'.
+	 * @return the meta object for the containment reference '<em>Tool</em>'.
 	 * @see ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getTool()
 	 * @see #getCompilationSession()
 	 * @generated
@@ -281,10 +281,10 @@ public interface CgmPackage extends EPackage {
 	EReference getCompilationSession_Tool();
 
 	/**
-	 * Returns the meta object for the reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getOptions <em>Options</em>}'.
+	 * Returns the meta object for the containment reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getOptions <em>Options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Options</em>'.
+	 * @return the meta object for the containment reference '<em>Options</em>'.
 	 * @see ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getOptions()
 	 * @see #getCompilationSession()
 	 * @generated
@@ -292,10 +292,10 @@ public interface CgmPackage extends EPackage {
 	EReference getCompilationSession_Options();
 
 	/**
-	 * Returns the meta object for the reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getIndex <em>Index</em>}'.
+	 * Returns the meta object for the containment reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getIndex <em>Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Index</em>'.
+	 * @return the meta object for the containment reference '<em>Index</em>'.
 	 * @see ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getIndex()
 	 * @see #getCompilationSession()
 	 * @generated
@@ -303,10 +303,10 @@ public interface CgmPackage extends EPackage {
 	EReference getCompilationSession_Index();
 
 	/**
-	 * Returns the meta object for the reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getCalls <em>Calls</em>}'.
+	 * Returns the meta object for the containment reference '{@link ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getCalls <em>Calls</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Calls</em>'.
+	 * @return the meta object for the containment reference '<em>Calls</em>'.
 	 * @see ru.arsysop.loft.cast.cgm.model.api.CompilationSession#getCalls()
 	 * @see #getCompilationSession()
 	 * @generated

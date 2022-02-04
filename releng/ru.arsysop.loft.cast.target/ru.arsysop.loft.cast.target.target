@@ -79,9 +79,25 @@
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://download.eclipse.org/tools/orbit/downloads/2021-09/"/>
-			<unit id="com.fasterxml.jackson.core.jackson-core" version="0.0.0"/>
-			<unit id="com.fasterxml.jackson.core.jackson-databind" version="0.0.0"/>
 			<unit id="org.junit" version="0.0.0"/>
+		</location>
+		<location includeSource="true" missingManifest="generate" type="Maven">
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.11.4</version>
+			<type>jar</type>
+		</location>
+		<location includeSource="true" missingManifest="generate" type="Maven">
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.11.4</version>
+			<type>jar</type>
+		</location>
+		<location includeSource="true" missingManifest="generate" type="Maven">
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.11.4</version>
+			<type>jar</type>
 		</location>
 		<location includeSource="true" missingManifest="generate" type="Maven">
 			<groupId>org.emfjson</groupId>

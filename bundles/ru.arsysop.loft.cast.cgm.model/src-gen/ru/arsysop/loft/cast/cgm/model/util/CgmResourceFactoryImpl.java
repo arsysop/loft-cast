@@ -21,6 +21,7 @@ package ru.arsysop.loft.cast.cgm.model.util;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.emfjson.jackson.resource.JsonResource;
 import org.emfjson.jackson.resource.JsonResourceFactory;
 
 /**
@@ -45,11 +46,12 @@ public class CgmResourceFactoryImpl extends JsonResourceFactory {
 	 * Creates an instance of the resource.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Resource createResource(URI uri) {
-		Resource result = new CgmResourceImpl(uri);
+		JsonResource result = new CgmResourceImpl(uri);
+		result.setObjectMapper(getMapper());
 		return result;
 	}
 
